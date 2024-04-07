@@ -14,3 +14,5 @@
 /lsm
 /cmake-build-debug/
 /cmake-build-release/
+/task_iter
+/task_iter_restore

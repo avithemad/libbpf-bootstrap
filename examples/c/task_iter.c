@@ -90,8 +90,12 @@ int main(int argc, char **argv)
 			err = -errno;
 			break;
 		}
-		if (ret == 0)
+		if (ret == 0){
+			printf("Completed 1 cycle\n\n");
+		}
+		if (exiting) {
 			break;
+		}
 		if (buf.kstack_len <= 0) {
 			printf("Error getting kernel stack for task. Task Info. Pid: %d. Process Name: %s. Kernel Stack Error: %d. State: %s\n",
 			       buf.pid, buf.comm, buf.kstack_len, get_task_state(buf.state));
